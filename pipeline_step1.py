@@ -5,8 +5,13 @@ Hamilton用データ変換関数群（ステップ1）
 
 import pandas as pd
 from typing import Dict, Any
+from column_lineage_tracker import ColumnLineageTracker
+
+# カラムリネージトラッカーのインスタンス
+tracker = ColumnLineageTracker()
 
 
+@tracker.track_function
 def raw_sales_data() -> pd.DataFrame:
     """
     生の売上データを読み込む
@@ -17,6 +22,7 @@ def raw_sales_data() -> pd.DataFrame:
     return pd.read_csv("data/sales_raw.csv")
 
 
+@tracker.track_function
 def cleaned_sales_data(raw_sales_data: pd.DataFrame) -> pd.DataFrame:
     """
     売上データのクリーニングを行う
@@ -39,6 +45,7 @@ def cleaned_sales_data(raw_sales_data: pd.DataFrame) -> pd.DataFrame:
     return cleaned
 
 
+@tracker.track_function
 def daily_sales_summary(cleaned_sales_data: pd.DataFrame) -> pd.DataFrame:
     """
     日別売上サマリーを作成する
