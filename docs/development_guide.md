@@ -448,4 +448,5 @@ def streaming_processor():
 - [データフロー設計](dataflow.md)
 - [アーキテクチャ設計](architecture.md)
 - [運用ガイド](operations.md)
+- [ワークフローパターン](workflow_patterns.md)
 - [README](../README.md)

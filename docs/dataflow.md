@@ -221,4 +221,5 @@ enriched_daily_summary → [weekly_aggregation, trend_analysis, top_performing_d
 - [アーキテクチャ設計](architecture.md)
 - [開発ガイド](development_guide.md)
 - [運用ガイド](operations.md)
+- [ワークフローパターン](workflow_patterns.md)
 - [README](../README.md)

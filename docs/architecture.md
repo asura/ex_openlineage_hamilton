@@ -358,4 +358,5 @@ graph TB
 - [データフロー設計](dataflow.md)
 - [開発ガイド](development_guide.md)
 - [運用ガイド](operations.md)
+- [ワークフローパターン](workflow_patterns.md)
 - [README](../README.md)

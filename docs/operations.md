@@ -309,4 +309,5 @@ def save_to_parquet(daily_sales_summary: pd.DataFrame) -> str:
 - [アーキテクチャ設計](architecture.md)
 - [データフロー設計](dataflow.md)
 - [開発ガイド](development_guide.md)
+- [ワークフローパターン](workflow_patterns.md)
 - [README](../README.md)
