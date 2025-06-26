@@ -1,5 +1,6 @@
 /.venv/
 /output/
+/lineage_history/
 __pycache__/
 .coverage
 .claude/

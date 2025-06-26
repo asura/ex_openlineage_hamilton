@@ -12,6 +12,7 @@ from typing import List, Optional
 from hamilton import driver
 from hamilton.base import SimplePythonGraphAdapter
 from openlineage.client import OpenLineageClient
+from view_lineage_history import LineageHistoryRecorder
 from openlineage.client.event_v2 import RunEvent, Job, Run, Dataset
 from openlineage.client.uuid import generate_new_uuid
 
@@ -47,6 +48,7 @@ class OpenLineageHamiltonTracker:
         self.namespace = namespace
         self.client = OpenLineageClient()
         self.run_id = generate_new_uuid()
+        self.history_recorder = LineageHistoryRecorder()
 
     def create_job(self, job_name: str) -> Job:
         """
@@ -107,6 +109,7 @@ class OpenLineageHamiltonTracker:
         )
 
         self.client.emit(event)
+        self.history_recorder.record_event(event)
         print(f"START event emitted for job: {job.name}")
 
     def emit_complete_event(
@@ -135,6 +138,7 @@ class OpenLineageHamiltonTracker:
         )
 
         self.client.emit(event)
+        self.history_recorder.record_event(event)
         print(f"COMPLETE event emitted for job: {job.name}")
 
 
@@ -223,6 +227,7 @@ def run_pipeline_with_openlineage():
             outputs=output_datasets,
         )
         tracker.client.emit(error_event)
+        tracker.history_recorder.record_event(error_event)
 
         print(f"Pipeline failed: {e}")
         raise
