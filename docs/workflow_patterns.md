@@ -428,6 +428,8 @@ class ResilientPipelineRunner:
 ## 関連ドキュメント
 - [アーキテクチャ設計](architecture.md)
 - [データフロー設計](dataflow.md)
+- [再開・増分実行機能](resume_and_incremental_execution.md)
+- [カラムリネージ仕様](column_lineage_specification.md)
 - [開発ガイド](development_guide.md)
 - [運用ガイド](operations.md)
 - [README](../README.md)

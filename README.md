@@ -125,6 +125,8 @@ python main.py
 └── docs/                    # 設計文書
     ├── architecture.md      # アーキテクチャ設計
     ├── dataflow.md         # データフロー設計
+    ├── resume_and_incremental_execution.md # 再開・増分実行機能
+    ├── column_lineage_specification.md # カラムリネージ仕様
     ├── development_guide.md # 開発ガイド
     ├── operations.md       # 運用ガイド
     └── workflow_patterns.md # ワークフローパターンと役割分担
