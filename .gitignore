@@ -1,3 +1,6 @@
 /.venv/
+/output/
 __pycache__/
 .coverage
+.claude/
+.python-version

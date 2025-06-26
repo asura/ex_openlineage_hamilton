@@ -7,3 +7,10 @@ pytest == 8.4.1
 pytest-cov == 6.2.1
 pytest-describe == 2.2.0
 pytest-spec == 5.0.0
+
+# Data pipeline dependencies
+# hamilton-sdk
+sf-hamilton == 1.88.0 
+pandas == 2.3.0
+openlineage-python == 1.34.0
+openlineage-integration-common == 1.34.0
